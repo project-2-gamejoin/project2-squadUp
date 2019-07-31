@@ -17,8 +17,8 @@ connection.connect(function (err) {
 });
 
 function Games(id, name) {
-this.id = id;
-this.name = name;
+    this.id = id;
+    this.name = name;
 }
 
 function Users(id, name) {
@@ -31,7 +31,7 @@ function Users(id, name) {
 function afterConnection() {
     connection.query("SELECT * FROM games_db.gamePlay", function (err, res) {
         if (err) throw err;
-    
+
         console.log(res);
         connection.end();
     });

@@ -11,6 +11,7 @@ userName VARCHAR(30) NOT NULL,
 activityType VARCHAR(30) NOT NULL,
 userText VARCHAR(55) NULL,
 hasMic BOOLEAN NOT NULL,
+created_at DATETIME NOT NULL,
 PRIMARY KEY(id)
 );
 
