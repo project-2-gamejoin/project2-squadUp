@@ -5,9 +5,12 @@ USE games_db;
 
 CREATE TABLE gamePlay (
 id INT NOT NULL AUTO_INCREMENT,
-gameName VARCHAR(30) NOT NULL,
+gameName VARCHAR(55) NOT NULL,
+platform VARCHAR(30) NOT NULL,
 userName VARCHAR(30) NOT NULL,
-userText VARCHAR(30),
+activityType VARCHAR(30) NOT NULL,
+userText VARCHAR(55) NULL,
+hasMic BOOLEAN NOT NULL,
 PRIMARY KEY(id)
 );
 
