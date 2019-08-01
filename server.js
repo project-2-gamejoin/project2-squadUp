@@ -13,11 +13,12 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 //Static directory to be served
-app.use("./app/routes/api-routes.js")(app);
+var apiRouter = require("./app/routing/api-routes.js");
+app.use(apiRouter)
 
 //Routes
-require("./app/routing/api-routes.js")(app);
-require("./app/routing/htmlRoutes.js")(app);
+// require("./app/routing/api-routes.js")(app);
+// require("./app/routing/htmlRoutes.js")(app);
 
 
 // Starts the server to begin listening
