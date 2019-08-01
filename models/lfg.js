@@ -16,9 +16,6 @@ module.exports = function (sequelize, DataTypes) {
         mic: {
             type: DataTypes.BOOLEAN,
             allowNull: false
-        },created_at: {
-            type: DataTypes.date,
-            allowNull: false
         },
     });
     return gamePlay;
