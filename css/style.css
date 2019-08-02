@@ -19,7 +19,17 @@
     color: aliceblue;
 }
 
-
+.wrapper{
+    position: absolute;
+    left:50%;
+    transform: translate(-50%);
+    width: 1000px;
+    margin: 0 auto;
+}
+.wrapper .searchbox
+{
+    position: relative;
+}
 .input
 {   
     margin: auto;
@@ -63,4 +73,12 @@
     box-shadow: 0 0 10px 1px;
     font-weight:bold
 
+}
+#inputContainer
+{
+    width: 900px;
+}
+*
+{
+    border: solid 1px;
 }
