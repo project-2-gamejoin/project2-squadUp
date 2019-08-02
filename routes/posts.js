@@ -3,13 +3,6 @@ var moment = require('moment');
 moment().format();
 const { Op } = require('sequelize');
 
-// model.findAll({
-//   where: {
-//     start_datetime: {
-//       [Op.gte]: moment().subtract(7, 'days').toDate()
-//     }
-//   }
-// })
 
 module.exports = function (app) {
   app.get("/api/posts", function (req, res) {
