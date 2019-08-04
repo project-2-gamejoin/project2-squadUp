@@ -23,7 +23,7 @@ $.get("/api/all", function(data) {
   });
   
   // When user adds new input (clicks postbutton)
-  $("#post-button").on("click", function(event) {
+  $("#btn").on("click", function(event) {
     event.preventDefault();
   
     // Make a newChirp object
