@@ -12,7 +12,7 @@ module.exports = function (app) {
     db.gamePlay.findAll({
       where: {
         createdAt: {
-          [Op.gte]: moment().subtract(1, 'days').toDate()
+          [Op.gte]: moment().subtract(2, 'minutes').toDate()
         }
       }
     }).then(function (dbgamePlay) {

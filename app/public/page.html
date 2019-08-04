@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
@@ -41,38 +42,34 @@
             </select>
             <form action="" method="post" id="mic">
                 Have mic?
-                <input id="mic-on" type="checkbox" name="mic-on" value="Yes" />Yes
-                <input id="mic-off" type="checkbox" name="mic-off" value="No" />No
+                <input id="mic" type="radio" name="mic" value="1" />Yes
+                <input id="mic" type="radio" name="mic" value="0" />No
             </form>
         </div>
         <div class="btn">
             <input id="btn" type="button" value="Post!">
         </div>
 
-        <div class="postname">
-            <div id="gameID">
+        <div class="postname row">
+            <div class="col" id="gameID">
                 Game ID
             </div>
-            <div id="gameType">
+            <div class="col" id="gameType">
                 Game Type
             </div>
-            <div id="info">
+            <div class="col" id="info">
                 Info
+            </div>
+            <div class="col" id="micSetting">
+                Mic Setting
+            </div>
+            <div class="col" id="createdAt">
+                Created At
             </div>
         </div>
         <div class="post-wrapper">
-            <div class="postid">
-                ghun22
-            </div>
-            <div class="postgame">
-                overwatch
-            </div>
-            <div class="quotes">
-                if anyone want to play some rank game you can join me!
-            </div>
-            <div class="micsetting">
-            </div>
-            <div class="timestemp"></div>
+
+           
         </div>
     
 
@@ -86,15 +83,14 @@
 
 
     <!--bootstrap JS-->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+        <script src="/js/game.js"></script>
 </body>
 
 </html>
