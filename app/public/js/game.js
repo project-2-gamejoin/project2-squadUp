@@ -26,13 +26,12 @@ $("#btn").on("click", function (event) {
   });
 });
 getPosts();
-setInterval(function(){ getPosts(); }, 1000);
 
 function getPosts() {
   $.ajax({
     url: "/api/posts",
     type: "GET",
-    success: function (data, textStatus, jqXHR) {
+    success: function (data) {
       var html = "";
       for (var i = 0; i < data.length; i++) {
         html = html + '<div class="row">';
@@ -48,3 +47,24 @@ function getPosts() {
     }
   });
 }
+
+$("#searchButt").on("click", function (event){
+  event.preventDefault();
+  var gameName = $("#gameSearch").val();
+  $.get("/api/posts/"+gameName).then(
+    function (data) {
+      var html = "";
+      for (var i = 0; i < data.length; i++) {
+        html = html + '<div class="row">';
+        html = html + '<div class="postid col">' + data[i].user_name +'</div>';
+        html = html + '<div class="postgame col">' + data[i].game_name + '</div>';
+        html = html + '<div class="quotes col">' + data[i].userText + '</div>';
+        html = html + '<div class="micsetting col">' + data[i].mic + '</div>';
+        html = html + '<div class="timestemp col">' + data[i].createdAt + '</div>';
+        html = html + '</div>';
+        
+      }
+      $(".post-wrapper").html(html);
+    }
+  )
+})
