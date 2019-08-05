@@ -47,5 +47,8 @@ function getPosts() {
         $(".post-wrapper").prepend(html);
       }
     }
+
   });
 }
+
+
