@@ -3,6 +3,9 @@ var moment = require('moment');
 moment().format();
 const { Op } = require('sequelize');
 
+var TIME_TO_SHOW = 1;
+var AMOUNT_OF_TIME = "days"
+
 
 module.exports = function (app) {
   app.get("/api/posts", function (req, res) {
@@ -12,7 +15,7 @@ module.exports = function (app) {
     db.gamePlay.findAll({
       where: {
         createdAt: {
-          [Op.gte]: moment().subtract(1, 'days').toDate()
+          [Op.gte]: moment().subtract(TIME_TO_SHOW, AMOUNT_OF_TIME).toDate()
         }
       }
     }).then(function (dbgamePlay) {
@@ -20,21 +23,24 @@ module.exports = function (app) {
     });
   });
 
-  app.get("/api/authors/:game_name", function (req, res) {
+  app.get("/api/posts/:game_name", function (req, res) {
     // Here we add an "include" property to our options in our findOne query
     // We set the value to an array of the models we want to include in a left outer join
     // In this case, just db.Post
-    db.Author.findOne({
+    db.gamePlay.findAll({
       where: {
         game_name: req.params.game_name,
         createdAt: {
-          [Op.gte]: moment().subtract(1, 'days').toDate()
+          [Op.gte]: moment().subtract(TIME_TO_SHOW, AMOUNT_OF_TIME).toDate()
         }
-      },
-      include: [db.Post]
+      }
     }).then(function (dbgamePlay) {
       res.json(dbgamePlay);
+    }).catch(function (err) {
+      console.log(err);
+      res.sendStatus(500)
     });
+
   });
 
   app.post("/api/make", function (req, res) {

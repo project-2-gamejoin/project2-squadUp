@@ -10,58 +10,76 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
     <!-- header -->
-    <div class="navbar">
+    <div class="navbar"><img src="img/squadUp.png" width="100px" alt="squadUp">
         <a href="#" clxbass="title"> Game Join</a>
     </div>
 
     <div class="coverphoto">
         <img src="img/imgonline-com-ua-collage-jH1slh83UFcXFR.jpg" id="mainphoto" alt="coverphoto" width="1000px">
     </div>
-    <p class="photo-text">Join with other Gamer to play your favorit game!
+    <p class="photo-text">Join with other Gamer to play your favorite game!
     </p>
     <div class="container">
-        <div class="row">
-            <div class="col align-self-start" id="inputContainer">
+            <nav class="navbar navbar-light bg-blue">
+                    <form class="form-inline">
+                      <input class="form-control mr-sm-2" id="gameSearch" type="search" placeholder="Search By Game" aria-label="Search">
+                      <button class="btn btn-outline-success my-2 my-sm-0" id="searchButt" type="submit">Search</button>
+                    </form>
+                  </nav>
 
-                <input type="text" class=input id="id-input" placeholder="Game ID">
+        <div id="inputContainer">
 
-                <input type="text" class="input" id="post-input" placeholder="What would you like to say">
+            <input type="text" class=input id="id-input" placeholder="Game ID">
 
-                <input type="text" class="input" id="game-input" placeholder="Game">
+            <input type="text" class="input" id="post-input" placeholder="What would you like to say">
 
-                <select name="platform" id="platforme">
-                    <option value="PC">PC</option>
-                    <option value="PS4">PS4</option>
-                    <option value="xbox">Xbox</option>
-                </select>
-                <form action="" method="post">
-                    Have mic?
-                    <input type="checkbox" name="mic on" value="Yes" />Yes
-                    <input type="checkbox" name="mic off" value="No" />No
-                </form>
+            <input type="text" class="input" id="game-input" placeholder="Game">
+
+            <select name="platform" id="platforme">
+                <option value="PC">PC</option>
+                <option value="PS4">PS4</option>
+                <option value="xbox">Xbox</option>
+            </select>
+            <form action="" method="post" id="mic">
+                Have mic?
+                <input id="mic" type="radio" name="mic" value="1" />Yes
+                <input id="mic" type="radio" name="mic" value="0" />No
+            </form>
+        </div>
+        <div class="btn">
+            <input id="btn" type="button" value="Post!">
+        </div>
+
+        <div class="postname row">
+            <div class="col" id="gameID">
+                Game ID
+            </div>
+            <div class="col" id="gameType">
+                Game Type
+            </div>
+            <div class="col" id="info">
+                Info
+            </div>
+            <div class="col" id="micSetting">
+                Mic Setting
+            </div>
+            <div class="col" id="createdAt">
+                Created At
             </div>
         </div>
-        <div class="row">
-            <div class="col">
-                <div class="btn">
-                    <input id="btn" type="button" value="Post!">
-                </div>
-            </div>
-        </div>
-
-
         <div class="post-wrapper">
-            <div class="postid"></div>
-            <div class="postgame"></div>
-            <div class="quotes"></div>
-            <div class="timestemp"></div>
+
+
         </div>
+
+
     </div>
-    </div>
+
 
 
 
@@ -70,15 +88,14 @@
 
 
     <!--bootstrap JS-->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <script src="/js/game.js"></script>
 </body>
 
 </html>
