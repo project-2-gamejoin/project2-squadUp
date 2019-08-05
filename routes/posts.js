@@ -26,7 +26,10 @@ module.exports = function (app) {
     // In this case, just db.Post
     db.gamePlay.findOne({
       where: {
-        game_name: req.params.game_name
+        game_name: req.params.game_name,
+        createdAt: {
+          [Op.gte]: moment().subtract(1, 'days').toDate()
+        }
       },
       include: [db.Post]
     }).then(function (dbgamePlay) {
