@@ -81,7 +81,9 @@
 }
 #inputContainer
 {
-    width: 1000px;
+        width: 1000px;
+        position: relative;
+        left: 65px;
 }
 /* *
 {
@@ -98,6 +100,7 @@
     font-weight: bold;
     background-color: navy;
     color: white;
+    
 }
 #mic
 {
@@ -139,4 +142,16 @@
 {
     width: 740px;
     float: left ;
+}
+
+.postname
+{
+    font-weight: bold;
+    border: 1px solid black
+}
+
+.btn {
+    position: relative;
+    left: 42px;
+    padding-bottom: 15px;
 }
