@@ -1,0 +1,28 @@
+{
+  "name": "project2-squadup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/project-2-gamejoin/project2-squadUp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/project-2-gamejoin/project2-squadUp/issues"
+  },
+  "homepage": "https://github.com/project-2-gamejoin/project2-squadUp#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "moment": "^2.24.0",
+    "mysql2": "^1.6.5",
+    "sequelize": "^5.12.2",
+    "sequelize-cli": "^5.5.0"
+  }
+}

@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Game Join</title>
+    <!--bootstrap css-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <!-- header -->
+    <div class="navbar">
+        <a href="#" clxbass="title"> Game Join</a>
+    </div>
+
+    <div class="coverphoto">
+        <img src="img/imgonline-com-ua-collage-jH1slh83UFcXFR.jpg" id="mainphoto" alt="coverphoto" width="1000px">
+    </div>
+    <p class="photo-text">Join with other Gamer to play your favorite game!
+    </p>
+    <div class="container">
+
+        <div id="inputContainer">
+
+            <input type="text" class=input id="id-input" placeholder="Game ID">
+
+            <input type="text" class="input" id="post-input" placeholder="What would you like to say">
+
+            <input type="text" class="input" id="game-input" placeholder="Game">
+
+            <select name="platform" id="platforme">
+                <option value="PC">PC</option>
+                <option value="PS4">PS4</option>
+                <option value="xbox">Xbox</option>
+            </select>
+            <form action="" method="post" id="mic">
+                Have mic?
+                <input id="mic" type="radio" name="mic" value="1" />Yes
+                <input id="mic" type="radio" name="mic" value="0" />No
+            </form>
+        </div>
+        <div class="btn">
+            <input id="btn" type="button" value="Post!">
+        </div>
+
+        <div class="postname row">
+            <div class="col" id="gameID">
+                Game ID
+            </div>
+            <div class="col" id="gameType">
+                Game Type
+            </div>
+            <div class="col" id="info">
+                Message
+            </div>
+            <div class="col" id="micSetting">
+                Mic On?
+            </div>
+            <div class="col" id="platform">
+                Platform
+            </div>
+            <div class="col" id="createdAt">
+                Created At
+            </div>
+        </div>
+        <div class="post-wrapper">
+
+           
+        </div>
+    
+
+    </div>
+
+
+
+
+
+
+
+
+    <!--bootstrap JS-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+        <script src="/js/game.js"></script>
+</body>
+
+</html>
