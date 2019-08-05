@@ -32,19 +32,21 @@ function getPosts() {
     url: "/api/posts",
     type: "GET",
     success: function (data) {
-      var html = "";
+      $(".post-wrapper").html("");
       for (var i = 0; i < data.length; i++) {
+        var html = "";
         html = html + '<div class="row">';
         html = html + '<div class="postid col">' + data[i].user_name +'</div>';
         html = html + '<div class="postgame col">' + data[i].game_name + '</div>';
         html = html + '<div class="quotes col">' + data[i].userText + '</div>';
         html = html + '<div class="micsetting col">' + data[i].mic + '</div>';
+        html = html + '<div class="platform col">' + data[i].platform + '</div>';
         html = html + '<div class="timestemp col">' + data[i].createdAt + '</div>';
         html = html + '</div>';
-        
+        $(".post-wrapper").prepend(html);
       }
-      $(".post-wrapper").html(html);
     }
+
   });
 }
 
