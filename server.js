@@ -12,8 +12,10 @@ var PORT = 3000;
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.static('app/public'))
+
 require("./routes/posts.js")(app);
-// require("./app/routing/htmlRoutes")(app);
+require("./routes/html-routes")(app);
 
 // Starts the server to begin listening
 // =============================================================
