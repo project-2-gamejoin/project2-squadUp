@@ -60,6 +60,7 @@
 {
     font: bold;
     text-align: center;
+    padding-top: 15px;
 }
 
 #mainphoto
@@ -154,4 +155,8 @@
     position: relative;
     left: 42px;
     padding-bottom: 15px;
+}
+
+.title {
+    font-size: 20px;
 }
