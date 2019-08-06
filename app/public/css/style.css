@@ -1,6 +1,5 @@
-.navbar
-{
-    background-color: rgb(0, 0, 94);
+.navbar {
+    background-color: #005b96;
     margin-top: 10px;
     padding: 20px;
     margin-bottom: 10px;
@@ -9,146 +8,163 @@
     margin-right: auto;
     width: 1200px;
 }
-.contain
-{
+
+.contain {
     width: 1040px;
     margin: 0 auto;
 }
-.title
-{
+
+.title {
     color: aliceblue;
     font-size: 30px;
 }
-.title:hover
-{
+
+.title:hover {
     color: aliceblue;
 }
 
-.wrapper{
+.wrapper {
     position: absolute;
-    left:50%;
+    left: 50%;
     transform: translate(-50%);
     width: 1000px;
     margin: 0 auto;
 }
-.wrapper .searchbox
-{
+
+.wrapper .searchbox {
     position: relative;
 }
-.input
-{   
+
+.input {
     margin: auto;
     width: 420px;
     border: 0;
     background-color: white;
     height: 50px;
-    border-radius:50px;
+    border-radius: 50px;
     padding: 0px 35px;
-    box-shadow: 0 0 10px 1px ;
+    box-shadow: 0 0 10px 1px;
     outline: none;
     font-weight: bold;
     margin: 5px;
 }
 
-#id-input, #game-input
-{   
+#id-input,
+#game-input {
     width: 200px;
     text-align: center;
 }
 
-.photo-text
-{
+.photo-text {
     font: bold;
     text-align: center;
     padding-top: 15px;
 }
 
-#mainphoto
-{
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
+#mainphoto {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
-#platforme
-{
+#platforme {
     border: 1;
     height: 30px;
-    border-radius:50px;
+    border-radius: 50px;
     padding: 0px 35px;
     box-shadow: 0 0 10px 1px;
-    font-weight:bold
+    font-weight: bold
+}
 
+#inputContainer {
+    width: 1000px;
+    position: relative;
+    left: 65px;
 }
-#inputContainer
-{
-        width: 1000px;
-        position: relative;
-        left: 65px;
-}
+
+
 /* *
 {
     border: solid 1px;
 } */
 
-#btn
-{
+#btn {
     width: 1000px;
-    border-radius:50px;
+    border-radius: 50px;
     padding: 0px 35px;
-    box-shadow:0 0 10px 1px;
+    box-shadow: 0 0 10px 1px;
     height: 30px;
     font-weight: bold;
-    background-color: navy;
+    background-color: #005b96;
     color: white;
-    
 }
-#mic
-{
+
+#gameSearch {
+    border-radius: 50px;
+    padding: 0px 35px;
+    box-shadow: 0 0 10px 1px;
+}
+
+#searchButt {
+    border: #03396c;
+    color: #b3cde0;
+    border-radius: 50px;
+    padding: 0px 35px;
+    box-shadow: 0 0 10px 1px;
+    background-color: #005b96;
+}
+
+#searchButt:hover {
+    background-color: #03396c;
+}
+
+#mic {
     text-align: center;
 }
-.postname, .post-wrapper
-{
+
+.postname,
+.post-wrapper {
     width: 1000px;
     height: 30px;
     margin: 0 auto;
-
 }
-#gameID 
-{
+
+#gameID {
     width: 100px;
     float: left;
 }
-#gameType 
-{
+
+#gameType {
     width: 150px;
     float: left;
 }
-#info
-{
+
+#info {
     width: 740px;
     float: left;
 }
-.postid
-{
+
+.postid {
     width: 100px;
     float: left;
 }
-.postgame
-{
+
+.postgame {
     width: 150px;
     float: left;
 }
-.qoutes
-{
+
+.qoutes {
     width: 740px;
-    float: left ;
+    float: left;
 }
 
-.postname
-{
+.postname {
     font-weight: bold;
-    border: 1px solid black
+    border: 1px solid white;
+    border-radius: 50px;
+    padding: 0px 35px;
+    box-shadow: 0 0 10px 1px white;
 }
 
 .btn {
@@ -159,4 +175,114 @@
 
 .title {
     font-size: 20px;
+}
+
+body,
+html {
+    background-color: #b3cde0;
+}
+
+@media only screen and (max-width: 1200px) {
+    #inputContainer {
+        width: 1140px;
+        left: 40px;
+    }
+    .input {
+        width: 250px;
+        height: 30px;
+    }
+    #id-input,
+    #game-input {
+        width: 175px;
+        text-align: center;
+    }
+    #platforme {
+        height: 30px;
+    }
+    #btn {
+        width: 930px;
+        left: 0px;
+    }
+    .btn {
+        left: 0px;
+    }
+    .postname {
+        width: 960px;
+    }
+    #mainphoto {
+        width: 960px;
+    }
+    #mic {
+        width: 960px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    #inputContainer {
+        width: 720px;
+        left: 40px;
+    }
+    .input {
+        width: 200px;
+        height: 30px;
+    }
+    #id-input,
+    #game-input {
+        width: 125px;
+        text-align: center;
+    }
+    #platforme {
+        height: 30px;
+    }
+    #btn {
+        width: 700px;
+        left: 0px;
+    }
+    .btn {
+        left: 0px;
+    }
+    .postname {
+        width: 720px;
+    }
+    #mainphoto {
+        width: 720px;
+    }
+    #mic {
+        width: 720px;
+    }
+}
+
+@media only screen and (max-width: 749px) {
+    #inputContainer {
+        width: 540px;
+        left: 0px;
+    }
+    .input {
+        width: 150px;
+        height: 30px;
+    }
+    #id-input,
+    #game-input {
+        width: 100px;
+        text-align: center;
+    }
+    #platforme {
+        height: 25px;
+    }
+    #btn {
+        width: 500px;
+        left: 0px;
+    }
+    .btn {
+        left: 0px;
+    }
+    .postname {
+        width: 540px;
+    }
+    #mainphoto {
+        width: 540px;
+    }
+    #mic {
+        width: 540px;
+    }
 }
