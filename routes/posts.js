@@ -3,8 +3,8 @@ var moment = require('moment');
 moment().format();
 const { Op } = require('sequelize');
 
-var TIME_TO_SHOW = 1;
-var AMOUNT_OF_TIME = "days"
+var TIME_TO_SHOW = 2;
+var AMOUNT_OF_TIME = "minutes"
 
 
 module.exports = function (app) {
