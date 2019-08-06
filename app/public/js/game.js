@@ -23,9 +23,12 @@ $("#btn").on("click", function (event) {
       getPosts();
 
     }
+
   });
 });
 getPosts();
+setInterval(function(){ getPosts(); }, 2000);
+
 
 function getPosts() {
   $.ajax({
