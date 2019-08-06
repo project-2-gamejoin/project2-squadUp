@@ -27,7 +27,7 @@ $("#btn").on("click", function (event) {
   });
 });
 getPosts();
-setInterval(function(){ getPosts(); }, 2000);
+setInterval(function(){ getPosts(); }, 30000);
 
 
 function getPosts() {
