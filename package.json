@@ -20,7 +20,7 @@
   "homepage": "https://github.com/project-2-gamejoin/project2-squadUp#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "moment": "^2.24.0",
+    "moment": "2.24.0",
     "mysql2": "^1.6.5",
     "sequelize": "^5.12.2",
     "sequelize-cli": "^5.5.0"

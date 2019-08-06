@@ -23,9 +23,12 @@ $("#btn").on("click", function (event) {
       getPosts();
 
     }
+
   });
 });
 getPosts();
+setInterval(function(){ getPosts(); }, 2000);
+
 
 function getPosts() {
   $.ajax({
@@ -35,13 +38,17 @@ function getPosts() {
       $(".post-wrapper").html("");
       for (var i = 0; i < data.length; i++) {
         var html = "";
+        var micStatus = 'no';
+        if(data[i].mic) {
+          micStatus = 'yes';
+        }
         html = html + '<div class="row">';
-        html = html + '<div class="postid col">' + data[i].user_name +'</div>';
-        html = html + '<div class="postgame col">' + data[i].game_name + '</div>';
-        html = html + '<div class="quotes col">' + data[i].userText + '</div>';
-        html = html + '<div class="micsetting col">' + data[i].mic + '</div>';
-        html = html + '<div class="platform col">' + data[i].platform + '</div>';
-        html = html + '<div class="timestemp col">' + data[i].createdAt + '</div>';
+        html = html + '<div class="postid col col-2">' + data[i].user_name +'</div>';
+        html = html + '<div class="postgame col col-2">' + data[i].game_name + '</div>';
+        html = html + '<div class="quotes col col-3">' + data[i].userText + '</div>';
+        html = html + '<div class="micsetting col col-1">' + micStatus + '</div>';
+        html = html + '<div class="platform col col-2">' + data[i].platform + '</div>';
+        html = html + '<div class="timestemp col col-2">' + data[i].createdAt + '</div>';
         html = html + '</div>';
         $(".post-wrapper").prepend(html);
       }
@@ -57,12 +64,17 @@ $("#searchButt").on("click", function (event){
     function (data) {
       var html = "";
       for (var i = 0; i < data.length; i++) {
+        var micStatus = 'no';
+        if(data[i].mic) {
+          micStatus = 'yes';
+        }
         html = html + '<div class="row">';
-        html = html + '<div class="postid col">' + data[i].user_name +'</div>';
-        html = html + '<div class="postgame col">' + data[i].game_name + '</div>';
-        html = html + '<div class="quotes col">' + data[i].userText + '</div>';
-        html = html + '<div class="micsetting col">' + data[i].mic + '</div>';
-        html = html + '<div class="timestemp col">' + data[i].createdAt + '</div>';
+        html = html + '<div class="postid col col-2">' + data[i].user_name +'</div>';
+        html = html + '<div class="postgame col col-2">' + data[i].game_name + '</div>';
+        html = html + '<div class="quotes col col-3">' + data[i].userText + '</div>';
+        html = html + '<div class="micsetting col col-1">' + micStatus + '</div>';
+        html = html + '<div class="platform col col-2">' + data[i].platform + '</div>';
+        html = html + '<div class="timestemp col col-2">' + data[i].createdAt + '</div>';
         html = html + '</div>';
         
       }
